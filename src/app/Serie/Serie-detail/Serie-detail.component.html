@@ -1,0 +1,25 @@
+<div  class="panel-body">
+    <div class="border margin p-3">
+        <p class="h3 p-2 author-name">>{{ serieDetail?.titulo}}</p>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="thumb">
+                    <img class="img-fluid img-thumbnail border border-danger"
+                    src="{{ serieDetail?.imagen }}"
+                    alt="{{ serieDetail?.titulo }}"
+                  />
+                </div>
+            </div>
+            <div class="col-md-7">
+                <dl>
+                    <dt class="text-title">Descripcion</dt>
+                    <dd class="text">{{ serieDetail?.descripcion }}</dd>
+                    <dt class="text-title">Correo</dt>
+                    <dd class="text">{{ serieDetail?.plataforma}}</dd>
+                    <dt class="text-title">Temporadas</dt>
+                    <dd class="text">{{ serieDetail?.temporadas }}</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>

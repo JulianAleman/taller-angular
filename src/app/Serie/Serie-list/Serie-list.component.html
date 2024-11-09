@@ -1,0 +1,41 @@
+<div class="container-fluid mt-2 mb-4">
+    <h2 class="text-center">Series</h2>
+  
+    <div class="row">
+      <div class="col-md-6" id="centrado">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Título</th>
+              <th scope="col">Plataforma</th>
+              <th scope="col">Temporadas</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let serie of series" (click)="selectAsesor(serie)">
+              
+              <td>{{ serie.titulo }}</td>
+              <td>{{ serie.plataforma }}</td>
+              <td>{{ serie.temporadas }}</td>
+            </tr>
+            <tr>
+                <td ></td>
+                <td><strong>Promedio Temporadas:</strong></td>
+                <td>{{ promedioTemporadas | number:'1.0-0' }}</td>
+              </tr>
+          </tbody>
+          
+        </table>
+      </div>
+  
+      <!-- Columna para los detalles de la serie seleccionada -->
+      <div class="col-md-6" *ngIf="selectedSerie">
+        <app-Serie-detail [serieDetail]="selectedSerie"></app-Serie-detail>
+      </div>
+    </div>
+  
+    <div class="row">
+      <br><br>
+    </div>
+  </div>
+  

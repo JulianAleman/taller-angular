@@ -1,0 +1,15 @@
+.black-text {
+    color: #000000;
+  }
+  
+  .card {
+    background: #75b2d8;
+  }
+  
+#centrado{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
